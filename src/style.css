@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    background: #111;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h3 {
+    font-weight: 400;
+}
+
+.weather-app {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    transition: 500ms;
+    opacity: 1;
+}
+
+.weather-app::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2em 3em 4em 3em;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-time, .temp {
+    margin: 0 1em;
+}
+
+.weather {
+    margin: 0;
+    margin-bottom: 0.2em;
+    font-size: 3em;
+}
+
+.temp {
+    font-size: 7em;
+}
+
+/* Box for recommended activities */
+.recommend_acti {
+    display: block;
+    margin: 1em 0; /* Added margin for spacing */
+    font-size: 0.9em; /* Decreased font size */
+    background: rgba(103, 90, 90, 0.8); /* Light background for the box */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    padding: 1em; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.panel {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(110,110,110,0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1;
+    padding: 3em 2em;
+    overflow-y: scroll;
+}
+
+.panel form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 3em;
+}
+
+.submit {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.4s;
+}
+
+.submit:hover {
+    color: #fa6d1b;
+}
+
+.search {
+    background: none;
+    border: none;
+    border-bottom: 1px #ccc solid;
+    padding: 0 1em 0.5em 0;
+    width: 100%;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.search:focus {
+    outline: none;
+    border-bottom-color: #fa6d1b;
+}
+
+.search::placeholder {
+    color: #ccc;
+}
+
+.panel ul {
+    padding: 0 0 1em 0;
+    margin: 2em 0;
+    border-bottom: 1px #acc solid;
+}
+
+.panel ul li {
+    color: #ccc;
+    margin: 2.5em 0;
+}
+
+.panel ul h4 {
+    margin: 3em 0;
+}
+
+.city {
+    display: block;
+    cursor: pointer;
+}
+
+.city.hover {
+    color: #fff;
+}
+
+.detail li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggle {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: #fa6d1b;
+}
+
+.panel {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background: rgba(110, 110, 110, 0.25);
+    transition: right 0.4s ease;
+}
+
+.panel.show {
+    right: 0;
+}
+
+.checklist-button {
+    background: rgb(255, 255, 255);
+    color: #fa6d1b;
+    border: rgb(74, 90, 90);
+    padding: 10px 20px;
+    margin-left: 2px;
+    cursor: pointer;
+    font-size: 1em; 
+    transition: color 0.3s;
+}
+
+.checklist-button:hover {
+    color: rgb(255, 255, 255);
+    background-color: #fa6d1b;
+}

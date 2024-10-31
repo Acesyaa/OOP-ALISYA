@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  text-align: center;
+  background-size: auto; /* Cover the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: black;
+  background-image: url(./images/mount2.jpg);
+}
+
+h1 {
+  color: #fa6d1b;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #fa6d1b;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+#createButton {
+  position: center;
+  top: 1em;
+  right: 1em;
+  background-color: #fa6d1b; /* Set background to orange */
+  color: white; /* Text color */
+  font-size: 1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#createButton:hover {
+  background-color: #e55d1a; /* Darken on hover */
+}
+
+#backButton {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background-color: #fa6d1b;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#backButton:hover {
+  background-color: #e67e22; /* Darker shade on hover */
+}

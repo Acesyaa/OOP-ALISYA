@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Activity | WeatherMate</title>
+    <link rel="stylesheet" href="createactivity.css">
+</head>
+<body>
+    <h1>Create New Activity</h1>
+    <button id="backButton">Back to Activities</button>
+    <div class="container">
+        <form id="activityForm">
+            <label for="activityName">Activity Name:</label>
+            <input type="text" id="activityName" required>
+
+            <label for="equipment">Equipment (Seperate every equipment by comma ","):</label>
+            <textarea id="equipment" required></textarea>
+
+            <button type="submit">Save Activity</button>
+        </form>
+    </div>
+    <script src="createactivity.js"></script>
+</body>
+</html>
